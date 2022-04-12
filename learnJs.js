@@ -22,4 +22,4 @@ var talk2 =  () => { //arrow function
 talk2();
 
 var talk3 =  () =>  console.log("Hello");  //arrow function in one line
-talk3();
+talk3();cre
