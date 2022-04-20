@@ -1,52 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-/*(ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-  reportWebVitals();
-);
-
-function Hello(props) {
-  return <h1>Hello World! -2 </h1>;
+class MenuItem extends React.Component {
+    render() {
+        return (
+            <tr>
+                <td><label>{this.props.Cost}</label></td>
+                <td><label>{this.props.Name}</label></td>
+            </tr>
+        )
+    }
 }
 
-ReactDOM.render(<Hello />, document.getElementById("root"));
-
-class Person extends React.Component{
-  render(){
-      return <h2>My name is sairama!</h2>
-  }
+class Menu extends React.Component {
+    render() {
+        return (
+            <div>
+                <table border="1">
+                  <th>Item</th>
+                  <th>Cost</th>
+                    <MenuItem Name="ap1" Cost="2" />
+                    <MenuItem Name="ap3" Cost="3" />
+                </table>
+            </div>
+        )
+    }
 }
 
-ReactDOM.render(<Person />, document.getElementById("root"));
-*/
-class Person extends React.Component {
-  render() {
-      return (
-          <div>
-              <td><label>{this.props.name}</label></td>
-              <td><label>{this.props.age}</label></td>
-          </div>
-      )
-  }
-}
-
-class PersonContainer extends React.Component {
-  render() {
-      return (
-          <div>
-              <table>
-                  <tr><Person name="sairama" age="20" /></tr>
-                  <tr><Person name="jamal" age="22"/></tr>
-              </table>
-          </div>
-      )
-  }
-}
-
-ReactDOM.render(<PersonContainer />, document.getElementById("root"));
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
+ReactDOM.render(<Menu />, document.getElementById("root"));
